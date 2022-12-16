@@ -1,0 +1,17 @@
+{% extends "base_generic.html" %}
+{% block content %}
+
+  {% if order_list %}
+  <p>НАШИ УСЛУГИ</p>
+  <ul>
+    {% for order in order_list %}
+    <div>
+      <img src="{{order.image.url}}">
+      <p>{{order.name}}</p>
+      <p>{{order.text_order}}</p>
+      <p>{{order.price}}</p>
+    </div>
+    {% endfor %}
+  </ul>
+{%endif%}
+{% endblock %}
